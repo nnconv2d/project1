@@ -3,6 +3,15 @@
     <title>Blog List</title>
 </head>
 <body>
-<h1>Hi, This is my new blog.</h1>
+<h1>This is Blog Page.</h1>
+<!-- Show post list-->
+<table>
+    {% for list in postlist %}
+        <!-- 게시글 클릭 시 세부 페이지로 이동-->
+        <ul>
+            <li><a href="{{ list.pk }}/">{{ list.postname }}</a></li>
+        </ul>
+    {% endfor %}
+</table>
 </body>
 </html>
