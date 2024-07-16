@@ -3,9 +3,14 @@
     <title>Posting!</title>
 </head>
 <body>
-<h1>This is an individual page of the post.</h1>
-<p>{{ post.postname }}</p>
-<p>{{ post.contents }}</p>
-<a href="/blog/">List</a>
+    <h1>This is an individual page of the post.</h1>
+    <p>{{ post.postname }}</p>
+    <p>{{ post.contents }}</p>
+    <!-- Show Images -->
+    {%  if post.mainphoto %}
+        <img src = "{{ post.mainphoto.url }}" alt="" height="600">
+        <br>
+    {% endif %}
+    <a href="/blog/">List</a>
 </body>
 </html>
